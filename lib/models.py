@@ -28,5 +28,3 @@ class Customer(Base):
 engine = create_engine("sqlite:///supplier_database.db")   
 Base.metadata.create_all(engine) 
 
-session = sessionmaker(bind=engine)
-createsession = session()
