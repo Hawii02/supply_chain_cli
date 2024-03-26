@@ -19,6 +19,23 @@ def find_supplier_by_name():
     else:
         print(f'Supplier "{supplier_name}" not found')
 
+def find_supplier_by_id():
+    id_input = input("Enter the supplier's id: ")
+    supplier = createsession.query(Supplier).filter_by(id = id_input).first()
+    if supplier:
+        print(f"Supplier id: {supplier.id}")
+        if supplier.supplier_name:
+            print(f"Supplier Name:{supplier.supplier_name}")
+        else:
+            print(f"{supplier.supplier_name} not found")
+
+        if supplier.supplier_contact:
+            print(f"supplier location:{supplier.supplier_location}")
+        else:
+            print("supplier location not available")
+    else:
+        print(f"Supplier id not found")
+
 def find_product_by_name():
     product = input("Enter the product name:")
     product = createsession.query(Supplier).filter_by(product = product).first()

@@ -1,10 +1,11 @@
-from helpers import find_supplier_by_name, delete_customer, add_customer, get_suppliers, find_product_by_name
+from helpers import find_supplier_by_name, delete_customer, add_customer, get_suppliers, find_product_by_name, find_supplier_by_id
 
 
 def main():
     while True:
         print("What do you want to enquire about?")
-        print("1. To find a supplier")
+        print("0. To find a suppler by id")
+        print("1. To find a supplier by name")
         print("2. To find a product")
         print("3. To delete a customer")
         print("4. To add a customer")
@@ -12,7 +13,10 @@ def main():
         print("6. Exit the application") 
         userschoice = input("What do you want to enquire about?")
         
-        if userschoice == "1":
+        if userschoice == "0":
+            find_supplier_by_id()
+
+        elif userschoice == "1":
             find_supplier_by_name()
 
         elif userschoice == "2":
