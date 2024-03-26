@@ -28,12 +28,14 @@ def find_product_by_name():
         print(f'Product "{product.product}" not found')
         
 def delete_customer():
-    customer_name = input("Enter the customer's name:") 
-    customer = createsession.query(Customer).filter_by(customer_name=customer_name).first()
-    if customer:
+    customer_name = input("Enter the customer's name:")
+    delete_customer = createsession.query(Customer).filter_by(customer_name=customer_name).first()
+    if delete_customer:
+        createsession.delete(delete_customer)
+        createsession.commit()
         print(f'Customer "{customer_name}" deleted successfully')
     else:
-        print(f'Customer "{customer_name}" not found')
+        print(f'Customer "{customer_name}" not found') 
 
 def get_suppliers():
     suppliers = createsession.query(Supplier).all()
