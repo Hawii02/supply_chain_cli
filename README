@@ -1,0 +1,23 @@
+# Supply Chain_cli Project
+My project entails a database which has a Customer table and a Supplier table and is joined in a one to many relationship by a PRIMARY KEY which is supplier id, it joins both Customer table and Supplier table where Supplier id is the FOREIGN KEY to Customer table. It also contains a CLI for a customer to find a supplier, find a product by name and list all suppliers.
+
+# Supplier Table
+The supplier table has the following Columns:
+supplier id, supplier name, supplier contact, supplier location, product.
+The supplier table contains their details in the database and all a customer would need to know to connect with them if they want a particular product.
+
+
+# Customer Table
+The customer table has the following Columns:
+customer name, customer contact, customer location, supplier id.
+The purpose of this table is for the supplier to know and plan out with the customer by accessing their details to carry out sales.
+A supplier can also delete a customer from database and can also create or add a customer to database to connect with them directly and also to know which products they are looking for.
+
+# CLI
+What entails on my menu:
+1. To find a supplier it has a function which is stored in the helpers function
+2. To find a product- it ideally displays the products which match the name which is inputed in the command line
+3. To delete a customer it deletes the customers details from the database
+4. To add a customer it adds the customer to the database together with name, location and contact.
+5. List all suppliers it lists all suppliers in the database
+6. Exit the application it exits from the menu

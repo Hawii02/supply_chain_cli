@@ -33,7 +33,7 @@ def delete_customer():
     if delete_customer:
         createsession.delete(delete_customer)
         createsession.commit()
-        print(f'Customer "{customer_name}" deleted successfully')
+        print(f'Customer "{customer_name}" deleted successfully 🚮')
     else:
         print(f'Customer "{customer_name}" not found') 
 

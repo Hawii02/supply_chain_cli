@@ -10,7 +10,7 @@ def main():
         print("4. To add a customer")
         print("5. List all suppliers")
         print("6. Exit the application") 
-        userschoice = input("what do you want to enquire about?")
+        userschoice = input("What do you want to enquire about?")
         
         if userschoice == "1":
             find_supplier_by_name()
@@ -24,7 +24,7 @@ def main():
         elif userschoice == "5":
             get_suppliers()
         elif userschoice == "6":
-            print("Exiting the App, byee")
+            print("Exiting the App, byee 👋")
             exit()
         else:
             print("Invalid choice")
