@@ -1,4 +1,4 @@
-from helpers import find_supplier_by_name, delete_customer, create_customer, get_suppliers, find_product_by_name
+from helpers import find_supplier_by_name, delete_customer, add_customer, get_suppliers, find_product_by_name
 
 
 def main():
@@ -20,7 +20,7 @@ def main():
         elif userschoice == "3":
             delete_customer()
         elif userschoice == "4":
-            create_customer()
+            add_customer()
         elif userschoice == "5":
             get_suppliers()
         elif userschoice == "6":

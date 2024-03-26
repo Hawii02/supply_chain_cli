@@ -26,7 +26,7 @@ def find_product_by_name():
         print(f'Product found: {product.product}')
     else:
         print(f'Product "{product.product}" not found')
-        
+
 def delete_customer():
     customer_name = input("Enter the customer's name:")
     delete_customer = createsession.query(Customer).filter_by(customer_name=customer_name).first()
@@ -42,12 +42,23 @@ def get_suppliers():
     for supplier in suppliers:
         print(supplier.supplier_name)
           
-def create_customer():
+# def create_customer():
+#     name = input("Enter the customer's name:")
+#     contact = input("Enter the customer's contact:")
+#     location = input("Enter the customer's location:")
+#     try:
+#         customer = Customer(customer_name=name,customer_contact=contact, customer_location=location)
+#         print(f'Success: {customer.customer_name} on registering')
+#     except Exception as exc:
+#         print("Error adding customer:", exc)
+
+
+def add_customer():
     name = input("Enter the customer's name:")
     contact = input("Enter the customer's contact:")
-    location = input("Enter the customer's location:")
-    try:
-        customer = Customer(customer_name=name,customer_contact=contact, customer_location=location)
-        print(f'Success: {customer.customer_name} on registering')
-    except Exception as exc:
-        print("Error adding customer:", exc)
+    location = input("Enter customer's location:")
+    customer = Customer(customer_name = name, customer_contact = contact, customer_location = location)
+    createsession.add(customer)
+    createsession.commit()
+    print(f'Success: {customer.customer_name} on registering 🎉')
+   
